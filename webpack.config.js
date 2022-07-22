@@ -10,7 +10,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Coffee",
+      title: "Coffee n' Dine",
     }),
   ],
   output: {
@@ -32,7 +32,7 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: '[contenthash].[ext]',
-              outputPath: 'assets/images/' // Note - does not work on webpack-dev-server, only npx webpack
+              outputPath: 'assets/images/' // Note - webpack-dev-server handles files in memory, npx webpack shows generated files
             }
           }
         ]

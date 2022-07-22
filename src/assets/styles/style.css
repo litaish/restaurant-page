@@ -1,4 +1,25 @@
-.hello {
-    color: red;
-    /* background: url('../img/ramen.jpg'); */
-  }
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+:root {
+  --c-alpha: #FFD3AB;
+  --c-beta: #FFE79E;
+  --c-gamma: #2597B3;
+  --c-alpha-text: #000000;
+  --c-beta-text: #FFFFFF;
+}
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+#content {
+  font-family: 'Amatic SC', cursive;
+}
