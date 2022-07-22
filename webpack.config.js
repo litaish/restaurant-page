@@ -10,7 +10,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Coffee n' Dine",
+      title: "Coffee",
     }),
   ],
   output: {
@@ -26,9 +26,22 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-
-        type: "asset/resource",
+        test: /\.(jpe?g|png|gif|svg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[contenthash].[ext]',
+              outputPath: 'assets/images/' // Note - does not work on webpack-dev-server, only npx webpack
+            }
+          }
+        ]
+      },
+      {
+        test:/\.html$/,
+        use: [
+          'html-loader'
+        ]
       },
     ],
   },
