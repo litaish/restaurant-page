@@ -20,6 +20,32 @@ html {
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
-#content {
+#content, nav {
   font-family: 'Amatic SC', cursive;
+}
+nav {
+  background-color: var(--c-alpha);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem;
+}
+nav > ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2rem;
+}
+nav > ul > li {
+  font-size: 2.5rem;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: .2rem;
+  text-decoration-color: var(--c-alpha);
+  transition: .3s;
+  font-weight: 700;
+}
+nav > ul > li:hover {
+  text-decoration-color: var(--c-gamma);
 }

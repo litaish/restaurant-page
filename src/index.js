@@ -1,7 +1,7 @@
 import 'normalize.css/normalize.css';
 import './assets/styles/style.css';
 import Ramen from './assets/images/ramen.jpg';
-import homeMe from './modules/home';
+import displayNav from './modules/nav';
 
 // Creates container element that will hold all page content
 function content() {
@@ -12,9 +12,13 @@ function content() {
   return element;
 }
 
-// Create navbar
-// document.body.innerHTML += ``
+// on load display home page and navbar
+window.addEventListener("load", () => {
+  displayNav(["Home", "Menu", "Contact"]);
 
-document.body.appendChild(content());
+  document.body.appendChild(content());
+})
+
+
 
   
