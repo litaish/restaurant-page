@@ -1,10 +1,10 @@
 import 'normalize.css/normalize.css';
 import './assets/styles/style.css';
-import Ramen from './assets/images/ramen.jpg';
-import displayNav from './modules/nav';
+import  displayNav from './modules/nav';
+import displayHome from './modules/home';
 
 // Creates container element that will hold all page content
-function content() {
+function getContent() {
   const element = document.createElement("div");
 
   element.setAttribute("id", "content");
@@ -16,8 +16,14 @@ function content() {
 window.addEventListener("load", () => {
   displayNav(["Home", "Menu", "Contact"]);
 
-  document.body.appendChild(content());
+  // Create an instance of content element
+  const contentEl = getContent()
+
+  document.body.appendChild(contentEl);
+
+  displayHome(contentEl);
 })
+
 
 
 
