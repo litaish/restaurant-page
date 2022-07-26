@@ -25,6 +25,7 @@ body {
 #content, nav {
   font-family: 'Amatic SC', cursive;
   animation: fadeIn 1.5s;
+  background-color: var(--c-beta);
 }
 @keyframes fadeIn {
   0% { opacity: 0; }
@@ -117,4 +118,48 @@ nav > ul > li:hover {
   font-size: 2rem;
   font-weight: 700;
   cursor: pointer;
+}
+.food-item-container {
+  display: grid;
+  text-align: center;
+  margin-left: 8%;
+  margin-right: 8%;
+  padding-bottom: 8%;
+  row-gap: 2rem;
+}
+.food-item-container > h1 {
+  font-size: 6rem;
+  font-weight: 700;
+}
+.food-item {
+  width: 80%;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 50% 20% 20%;
+  column-gap: 3.5rem;
+}
+/*Target first child div container*/
+.food-item > div:first-of-type > p {
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0.5rem;
+}
+.food-item > div:first-of-type > p:last-of-type {
+  font-size: 1.5rem;
+}
+.item-price {
+  background-color: var(--c-gamma);
+  height: 30px;
+  width: 150px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--c-beta-text);
+}
+.food-icon {
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
 }
