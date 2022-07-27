@@ -1,6 +1,6 @@
 import 'normalize.css/normalize.css';
 import './assets/styles/style.css';
-import  displayNav from './modules/nav';
+import   displayNav from './modules/nav';
 import displayHome from './modules/home';
 import displayMenu from './modules/menu';
 import displayContact from './modules/contact';
@@ -23,10 +23,41 @@ window.addEventListener("load", () => {
 
   document.body.appendChild(contentEl);
 
-  // displayHome(contentEl);
-  // displayMenu(contentEl);
-  displayContact(contentEl);
+  // On init display home page
+  displayHome(contentEl);
+  // Add event listeners for navbar list items
+  displayModule(contentEl);
 })
+
+const displayModule = (contentEl) => {
+  // Get all li elements
+  const liEls = document.querySelectorAll(".nav-element");
+
+  for (let i = 0; i < liEls.length; i++) {
+      liEls[i].addEventListener("click", function (e) {
+
+          switch(e.target.innerHTML) {
+            case "Home":
+              clearContent(contentEl);
+              displayHome(contentEl);
+            break;
+            case "Menu":
+              clearContent(contentEl);
+              displayMenu(contentEl);
+            break;
+            case "Contact":
+              clearContent(contentEl);
+              displayContact(contentEl);
+            break;
+          }
+      })
+  }
+}
+
+const clearContent = (contentEl) => {
+  contentEl.innerHTML = "";
+  
+}
 
 
 

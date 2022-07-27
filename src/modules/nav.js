@@ -9,7 +9,9 @@ const displayNav = (menuItems) => {
     menuItems.forEach(element => {
         const liEl = document.createElement("li");
         liEl.appendChild(document.createTextNode(element));
+        liEl.classList.add("nav-element");
         ulEl.appendChild(liEl);
+
     });
 
     document.body.appendChild(navEl);

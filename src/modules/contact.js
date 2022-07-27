@@ -5,6 +5,10 @@ const contactInfo = {
 }
 
 const displayContact = (content) => {
+
+    // Clear class name
+    content.className = "";
+    
     displayContactInfo(content);
 
     // Create form and map wrapper

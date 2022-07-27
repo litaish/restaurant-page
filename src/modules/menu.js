@@ -7,7 +7,6 @@ import Spaghetti from "../assets/images/spaghetti.jpg";
 // Seperate arrays for food and drink items
 const foodItemarr = [];
 const drinkItemArr = [];
-
 class MenuItem {
     constructor(name, description, price, img, isFood) {
         this.name = name;
@@ -58,6 +57,9 @@ const createMenuItems = () => {
 }
 
 const displayMenu = (content) => {
+
+    // Clear class name
+    content.className = "";
 
     createMenuItems();
 
@@ -115,7 +117,5 @@ const displayItems = (foodItemContainer, arr) => {
     
         })
 }
-
-
 
 export default displayMenu;

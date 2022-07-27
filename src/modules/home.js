@@ -2,20 +2,20 @@ const restaurantName = "Cofffe N' Dine";
 
 const displayHome = (content) => {
 
-    content.classList.toggle("content-home");
+    content.className = "content-home";
     displayTitle(content);
     displayInfo(content);
 }
 
 const displayTitle = (content) => {
     const titleContainer = document.createElement("div");
-    titleContainer.classList.toggle("title-container");
+    titleContainer.className = "title-container"
 
     const title = document.createElement("h1");
     title.innerText = restaurantName;
 
     const titleLine = document.createElement("hr");
-    titleLine.classList.toggle("title-line");
+    titleLine.classList.add("title-line");
 
     // Append all children
     titleContainer.append(title, titleLine);

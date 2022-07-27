@@ -65,7 +65,6 @@ nav > ul > li:hover {
 }
 .content-home {
   background-color: var(--c-beta);
-  position: relative;
   overflow: hidden;
   height: calc(100vh - var(--nav-height));
   display: flex;
