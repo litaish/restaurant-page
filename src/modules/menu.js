@@ -5,8 +5,8 @@ import Ramen from "../assets/images/ramen.jpg";
 import Spaghetti from "../assets/images/spaghetti.jpg";
 
 // Seperate arrays for food and drink items
-const foodItemarr = [];
-const drinkItemArr = [];
+let foodItemarr = [];
+let drinkItemArr = [];
 class MenuItem {
     constructor(name, description, price, img, isFood) {
         this.name = name;
@@ -21,6 +21,10 @@ class MenuItem {
 }
 
 const createMenuItems = () => {
+
+    // Clear arrays on function init
+    foodItemarr = [];
+    drinkItemArr = [];
 
     // Create menu item objects and add them to an array
     new MenuItem("Spaghetti And MeatBalls", 
