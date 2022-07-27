@@ -8,7 +8,3 @@ Restaurant page build with Webpack, consisting of:
 
 Each page is built into its own module. Page content changes
 dynamically.
-
----
-GitHub Pages demo:
-
