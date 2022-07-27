@@ -7,6 +7,7 @@
   --c-alpha-text: #000000;
   --c-beta-text: #FFFFFF;
   --nav-height: 4.5rem;
+  --c-form-border: #000000;
 }
 html {
   -webkit-box-sizing: border-box;
@@ -30,6 +31,11 @@ body {
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
+}
+#content > h1 {
+  text-align: center;
+  margin: 0;
+  padding: 64px;
 }
 nav {
   background-color: var(--c-alpha);
@@ -162,4 +168,98 @@ nav > ul > li:hover {
   height: 200px;
   width: 200px;
   border-radius: 100px;
+}
+.contact-info-title {
+  font-size: 6rem;
+}
+.contact-info-wrapper {
+  display: flex;
+}
+.info-item-wrapper {
+  font-weight: 700;
+  font-size: 2.5rem;
+  flex: 1 1 0px;
+  text-align: center;
+  margin-left: 8%;
+  margin-right: 8%;
+}
+.info-item-title {
+  font-weight: 700;
+  font-size: 4rem;
+}
+.form-map-wrapper {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-top: 1rem;
+  padding-bottom: 5rem;
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+.form-group {
+  display: flex;
+  gap: 1.5rem;
+}
+.form-group input {
+  border-bottom: 3px solid var(--c-form-border);
+}
+.form-group li {
+  flex: 1 1 0px;
+}
+form > ul > li {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+form label {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+form textarea {
+  resize: none;
+  border: 3px solid var(--c-form-border);
+  border-radius: 5px;
+}
+form input, textarea {
+  border: none;
+  background-color: rgba(255, 231, 158, 1);
+  font-size: 1.7rem;
+  font-weight: 700;
+
+}
+form input:focus, textarea:focus {
+  outline: none;
+}
+form input {
+  padding: .3rem;
+}
+.form-map-wrapper > div > h1 {
+  font-size: 4rem;
+  text-align: center;
+}
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+.btn-wrapper > button {
+  padding: .4rem 2.5rem;
+  background-color: var(--c-gamma);
+  color: var(--c-beta-text);
+  font-weight: 700;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#map {
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
 }

@@ -3,6 +3,7 @@ import './assets/styles/style.css';
 import  displayNav from './modules/nav';
 import displayHome from './modules/home';
 import displayMenu from './modules/menu';
+import displayContact from './modules/contact';
 
 // Creates container element that will hold all page content
 function getContent() {
@@ -23,7 +24,8 @@ window.addEventListener("load", () => {
   document.body.appendChild(contentEl);
 
   // displayHome(contentEl);
-  displayMenu(contentEl);
+  // displayMenu(contentEl);
+  displayContact(contentEl);
 })
 
 
