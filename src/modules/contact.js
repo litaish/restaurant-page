@@ -11,7 +11,6 @@ const displayContact = (content) => {
     const formMapWrapper = document.createElement("div");
     formMapWrapper.classList.add("form-map-wrapper");
     displayForm(formMapWrapper);
-    displayMap(formMapWrapper);
     content.appendChild(formMapWrapper);
 }
 
@@ -88,12 +87,6 @@ const displayForm = (formMapWrapper) => {
     formWrapper.append(form);
 
     formMapWrapper.appendChild(formWrapper);
-}
-
-const displayMap = (formMapWrapper) => {
-    const mapDiv = document.createElement("div");
-    mapDiv.setAttribute("id", "map");
-    formMapWrapper.appendChild(mapDiv);
 }
 
 export default displayContact;

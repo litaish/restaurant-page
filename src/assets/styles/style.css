@@ -188,8 +188,9 @@ nav > ul > li:hover {
   font-size: 4rem;
 }
 .form-map-wrapper {
-  display: grid;
-  grid-template-columns: 50% 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 1rem;
   padding-bottom: 5rem;
   margin-left: 5%;
@@ -258,8 +259,8 @@ form input {
   cursor: pointer;
 }
 #map {
-  height: 400px;
-  /* The height is 400 pixels */
+  position: absolute;
+  top: 0;
+  bottom: 0;
   width: 100%;
-  /* The width is the width of the web page */
 }
