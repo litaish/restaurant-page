@@ -1,10 +1,10 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const Dotenv = require('dotenv-webpack');
+const Dotenv = require("dotenv-webpack");
 
 module.exports = {
   mode: "development",
-  entry: './src/index.js',
+  entry: "./src/index.js",
   devtool: "inline-source-map",
   devServer: {
     static: "./dist",
@@ -13,7 +13,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "Coffee n' Dine",
     }),
-    new Dotenv()
+    new Dotenv(),
   ],
   output: {
     filename: "[name].js",
@@ -23,6 +23,16 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: [["@babel/preset-env", { targets: "defaults" }]],
+          },
+        },
+      },
+      {
         test: /\.css$/i,
 
         use: ["style-loader", "css-loader"],
@@ -31,19 +41,17 @@ module.exports = {
         test: /\.(jpe?g|png|gif|svg)$/,
         use: [
           {
-            loader: 'file-loader',
+            loader: "file-loader",
             options: {
-              name: '[contenthash].[ext]',
-              outputPath: 'assets/images/' // Note - webpack-dev-server handles files in memory, npx webpack shows generated files
-            }
-          }
-        ]
+              name: "[contenthash].[ext]",
+              outputPath: "assets/images/", // Note - webpack-dev-server handles files in memory, npx webpack shows generated files
+            },
+          },
+        ],
       },
       {
-        test:/\.html$/,
-        use: [
-          'html-loader'
-        ]
+        test: /\.html$/,
+        use: ["html-loader"],
       },
     ],
   },
